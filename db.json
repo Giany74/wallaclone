@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "username": "gianlucapettenon@gmail.com",
+      "password": "$2b$10$SEu53UuSgyiDXwkDZ0h4GOpBDwjW53TfY06Kms9q.pnY2dAG/oFAS",
+      "id": 1
+    },
+    {
+      "username": "gian1@gmail.com",
+      "password": "$2b$10$HZMGwGSnFl7ySqlqVMnKK.pn.DmoJo/YA7HJDaw8y/YgvMJ/Be4hO",
+      "id": 2
+    },
+    {
+      "username": "gian2@gmail.com",
+      "password": "$2b$10$HZMGwGSnFl7ySqlqVMnKK.pn.DmoJo/YA7HJDaw8y/YgvMJ/Be4hO",
+      "id": 3
+    }
+  ],
+  "tweets": [
+    {
+      "message": "gian1\n",
+      "userId": 2,
+      "updatedAt": "2023-10-25T08:12:46.431Z",
+      "id": 1
+    }
+  ]
+}
