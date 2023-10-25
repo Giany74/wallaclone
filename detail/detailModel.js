@@ -8,7 +8,7 @@ const parseTweet = (tweet) => {
   }
 }
 
-export const getTweet = async (tweetId) => {
+export const getAds = async (tweetId) => {
   const url = `http://localhost:8000/api/tweets/${tweetId}?_expand=user`;
   let tweet;
 
@@ -26,7 +26,7 @@ export const getTweet = async (tweetId) => {
   return parseTweet(tweet);
 }
 
-export const deleteTweet = async (tweetId) => {
+export const deleteAds = async (tweetId) => {
   const url = `http://localhost:8000/api/tweets/${tweetId}`;
   const token = localStorage.getItem('token');
 

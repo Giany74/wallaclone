@@ -1,4 +1,4 @@
-export const buildTweet = (tweet) => {
+export const buildAds = (tweet) => {
   let tweetTemplate = `
   <span>${tweet.handler}</span>
   <p>${tweet.message}</p>

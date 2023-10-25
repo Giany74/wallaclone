@@ -1,4 +1,4 @@
-import { tweetCreationController } from "./tweetCreationController.js";
+import { tweetCreationController } from "./creationController.js";
 import { notificationsController } from "../notifications/notificationsController.js";
 
 const token = localStorage.getItem('token');

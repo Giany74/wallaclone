@@ -1,5 +1,5 @@
-import { getTweets } from "./tweetListModel.js";
-import { buildTweet, emptyTweets } from "./tweetListView.js";
+import { getTweets } from "./listModel.js";
+import { buildTweet, emptyTweets } from "./listView.js";
 
 export const tweetListController = async (tweetList) => {
   tweetList.innerHTML = '';
@@ -9,7 +9,7 @@ export const tweetListController = async (tweetList) => {
     dispatchEvent('startLoadingTweets', null, tweetList);
     tweets = await getTweets();
   } catch (error) {
-    const event = createCustomEvent('error', 'Error cargando tweets')
+    const event = createCustomEvent('error', 'Error cargando Ads')
     tweetList.dispatchEvent(event);
   } finally {
     dispatchEvent('finishLoadingTweets', null, tweetList);
@@ -20,7 +20,7 @@ export const tweetListController = async (tweetList) => {
   } else {
     renderTweets(tweets, tweetList);
 
-    const event = createCustomEvent('success', 'Tweets cargados correctamente');
+    const event = createCustomEvent('success', 'Ads loaded');
     tweetList.dispatchEvent(event);
   }
   

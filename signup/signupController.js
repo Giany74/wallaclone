@@ -16,7 +16,7 @@ const validateForm = async (event, signupForm) => {
       await createUser(email.value, password.value);
       dispatchEvent('userCreated', {
         type: "success",
-        message: 'Usuario creado correctamente',
+        message: 'User successfully created',
       }, signupForm)
       window.location = './login.html';
     }
@@ -39,7 +39,7 @@ const isEmailValid = (email) => {
   let result = true;
 
   if (!emailRegExp.test(email.value)) {
-    throw 'El email no es correcto';
+    throw 'Wrong email';
   }
 
   return result;
@@ -49,7 +49,7 @@ const isPasswordValid = (password, passwordConfirmation) => {
   let result = true;
 
   if (password.value !== passwordConfirmation.value) {
-    throw 'las contraseñas no son iguales';
+    throw 'Passwords must be the same';
   }
 
   return result;

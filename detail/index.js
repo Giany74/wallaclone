@@ -1,4 +1,4 @@
-import { tweetDetailController } from "./tweetDetailController.js";
+import { tweetDetailController } from "./detailController.js";
 import { notificationsController } from "../notifications/notificationsController.js";
 
 document.addEventListener('DOMContentLoaded', () => {

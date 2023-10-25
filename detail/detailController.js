@@ -1,16 +1,16 @@
-import { deleteTweet, getTweet } from "./tweetDetailModel.js"
-import { buildTweet } from "./tweetDetailView.js";
+import { deleteAds, getAds } from "./detailModel.js"
+import { buildAds } from "./detailView.js";
 import { dispatchEvent } from "../utils/dispatchEvent.js";
 import { decodeToken } from "../utils/decodeToken.js";
 
 export const tweetDetailController = async (tweetDetail, tweetId) => {
 
   try {
-    const tweet = await getTweet(tweetId);
-    tweetDetail.innerHTML = buildTweet(tweet);
+    const tweet = await getAds(tweetId);
+    tweetDetail.innerHTML = buildAds(tweet);
     handleDeleteTweet(tweet, tweetDetail);
   } catch (error) {
-    dispatchEvent('tweetLoaded', { type: "error", message: "El tweet no existe" }, tweetDetail);
+    dispatchEvent('tweetLoaded', { type: "error", message: "El Ads no existe" }, tweetDetail);
     setTimeout(() => {
       window.location = './index.html';
     }, 3000);
@@ -32,10 +32,10 @@ const handleDeleteTweet = (tweet, tweetDetail) => {
 
 const addDeleteTweetButton = (tweet, tweetDetail) => {
   const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Borrar tweet';
+  deleteButton.textContent = 'Delete Ads';
   deleteButton.addEventListener('click', async () => {
-    if (confirm('¿Seguro que quieres borrar el tweet?')) {
-      await deleteTweet(tweet.id);
+    if (confirm('Surely you want to delete Ads?')) {
+      await deleteAds(tweet.id);
       window.location = 'index.html';
     }
   })

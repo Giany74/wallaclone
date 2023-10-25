@@ -1,6 +1,6 @@
 export const buildTweet = (tweet) => {
   return `
-  <a href="./tweetDetail.html?id=${tweet.id}">
+  <a href="./detail.html?id=${tweet.id}">
     <span>${tweet.handler}</span>
     <span>${tweet.date}</span>
     <p>${tweet.message}</p>

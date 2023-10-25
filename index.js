@@ -1,5 +1,5 @@
 import { notificationsController } from "./notifications/notificationsController.js";
-import { tweetListController } from "./tweet-list/tweetListController.js";
+import { tweetListController } from "./ads-list/listController.js";
 import { sessionController } from "./session/sessionController.js";
 import { loaderController } from "./loader/loaderController.js";
 
@@ -32,5 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 window.addEventListener('offline', () => {
-  showNotification('Se ha perdido la conexión', 'error');
+  showNotification('Lost connection', 'error');
 })

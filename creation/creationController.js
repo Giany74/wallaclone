@@ -1,4 +1,4 @@
-import { createTweet } from "./tweetCreationModel.js";
+import { createTweet } from "./creationModel.js";
 import { dispatchEvent } from "../utils/dispatchEvent.js";
 
 export const tweetCreationController = (tweetCreation) => {
@@ -11,12 +11,12 @@ export const tweetCreationController = (tweetCreation) => {
 
     try {
       await createTweet(message);
-      dispatchEvent('tweetCreated', { type: "success", message: "Tweet creado correctamente" }, tweetCreation);
+      dispatchEvent('tweetCreated', { type: "success", message: "Ads successfully completed" }, tweetCreation);
       setTimeout(() => {
         window.location = "index.html";
       }, 2000);
     } catch (error) {
-      dispatchEvent('tweetCreated', { type: "error", message: "Error creando tweet" }, tweetCreation);      
+      dispatchEvent('tweetCreated', { type: "error", message: "Ads error occurred" }, tweetCreation);      
     }
 
   })
