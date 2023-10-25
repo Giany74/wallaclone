@@ -2,7 +2,11 @@ const transformTweets = (tweets) => {
   return tweets.map(tweet => ({
     handler: tweet.user.username,
     date: new Date().toISOString(),
+    name: tweet.name,
     message: tweet.message,
+    price: tweet.price,
+    buySell: tweet.buySell,
+    photo: tweet.photo,
     id: tweet.id
   }))
 }

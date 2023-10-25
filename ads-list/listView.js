@@ -1,9 +1,11 @@
 export const buildTweet = (tweet) => {
   return `
   <a href="./detail.html?id=${tweet.id}">
-    <span>${tweet.handler}</span>
-    <span>${tweet.date}</span>
-    <p>${tweet.message}</p>
+    <span>${tweet.photo}</span>
+    <br>
+    <span>${tweet.price}</span>
+    <br>
+    <p>${tweet.name}</p>
   </a>
 
 `;

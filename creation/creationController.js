@@ -7,7 +7,7 @@ export const tweetCreationController = (tweetCreation) => {
     event.preventDefault();
 
     const formData = new FormData(tweetCreation);
-    const message = formData.get("message");
+    const message = formData.get("name", "message", "price", "buySell", "photo");
 
     try {
       await createTweet(message);

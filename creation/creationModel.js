@@ -1,9 +1,13 @@
-export const createTweet = async (message) => {
+export const createTweet = async (name, message, price, buySell, photo) => {
   const url = "http://localhost:8000/api/tweets";
   const token = localStorage.getItem('token');
 
   const body = {
-    message: message
+    name: name,
+    message: message,
+    price: price,
+    buySell: buySell,
+    photo: photo
   }
 
   let response;

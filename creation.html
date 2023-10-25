@@ -9,6 +9,16 @@
   <body>
     <section id="notifications"></section>
     <form id="tweetCreation">
+      <label for="name"></label>
+      <textarea
+      name="name"
+      id="name"
+      cols="30"
+      rows="3"
+      placeholder="name"
+      required
+    ></textarea>
+      <br>
       <label for="message"></label>
       <textarea
         name="message"
@@ -16,7 +26,17 @@
         cols="30"
         rows="10"
         required
+        placeholder="description"
       ></textarea>
+      <br>
+      <label for="price"></label>
+      <input name="price" id="price" type="text" placeholder="price">      
+      <br>
+      <label for="buySell"></label>
+      <input name="buySell" id="buySell" type="text" placeholder="buy/sell">
+      <br>
+      <label for="photo"></label>
+      <input name="photo" id="photo" type="text" placeholder="url photo">
 
       <button type="submit">New Ads</button>
     </form>
