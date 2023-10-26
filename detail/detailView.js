@@ -1,8 +1,10 @@
 export const buildAds = (tweet) => {
   let tweetTemplate = `
   <span>${tweet.handler}</span>
-  <p>${tweet.photo}</p>
-  <p>${tweet.price}</p>
+  <br>
+  <img src="${tweet.image}" alt="${tweet.name}">
+  <br>
+  <p>${tweet.price} €</p>
   <p>${tweet.name}</p>
   <p>${tweet.message}</p>
   <p>${tweet.buySell}</p>

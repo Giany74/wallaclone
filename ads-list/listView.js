@@ -1,8 +1,9 @@
 export const buildTweet = (tweet) => {
   return `
   <a href="./detail.html?id=${tweet.id}">  
-  <p>${tweet.photo}</p>
-  <p>${tweet.price}</p>
+  <img src="${tweet.image}" alt="${tweet.name}">
+  <br>
+  <p>${tweet.price} €</p>
   <p>${tweet.name}</p>
   <p>${tweet.message}</p>
   <p>${tweet.buySell}</p>

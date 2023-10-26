@@ -6,7 +6,7 @@ const transformTweets = (tweets) => {
     name: tweet.name,
     price: tweet.price,
     buySell: tweet.buySell,
-    photo: tweet.photo,
+    image: tweet.image,
     id: tweet.id
   }))
 }

@@ -5,7 +5,7 @@ const parseTweet = (tweet) => {
     name: tweet.name,
     price: tweet.price,
     buySell: tweet.buySell,
-    photo: tweet.photo,
+    image: tweet.image,
     userId: tweet.user.id,
     id: tweet.id
   }

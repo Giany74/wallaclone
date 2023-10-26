@@ -9,38 +9,16 @@
   <body>
     <section id="notifications"></section>
     <form id="tweetCreation">
+      
       <label for="name"></label>
       <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Name"
-        required
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Name"
+      required
       />
-      <label for="price"></label>
-      <input
-        type="text"
-        id="price"
-        name="price"
-        placeholder="Price"
-        required
-      />
-      <label for="buySell"></label>
-      <input
-        type="text"
-        id="buySell"
-        name="buySell"
-        placeholder="Buy/Sell"
-        required
-      />
-      <label for="photo"></label>
-      <input
-        type="text"
-        id="photo"
-        name="photo"
-        placeholder="url photo"
-        required
-      />
+
       <label for="message"></label>
       <textarea
         name="message"
@@ -51,6 +29,26 @@
         required
       ></textarea>
 
+      <label for="price"></label>
+      <input
+      type="number"
+      id="price"
+      name="price"
+      placeholder="Price"
+      required
+      />
+
+      <label for="buySell"></label>
+      <input type="radio" id="buySell" name="buySell" value="Buy" onclick="handleRadioChange(this.value)" required> Buy
+      <input type="radio" id="buySell" name="buySell" value="Sell" onclick="handleRadioChange(this.value)" required> Sell
+
+      <label for="image"></label>
+      <input
+        type="url"
+        id="image"
+        name="image"
+        placeholder="url image"
+      />
 
       <button type="submit">New Ads</button>
     </form>
