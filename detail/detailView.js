@@ -1,24 +1,24 @@
-export const buildAds = (tweet) => {
-  let tweetTemplate = `
-  <span>${tweet.handler}</span>
+export const buildAds = (ads) => {
+  let adsTemplate = `
+  <span>${ads.handler}</span>
   <br>
-  <img src="${tweet.image}" alt="${tweet.name}">
+  <img src="${ads.image}" alt="${ads.name}">
   <br>
-  <p>${tweet.price} €</p>
-  <p>${tweet.name}</p>
-  <p>${tweet.message}</p>
-  <p>${tweet.buySell}</p>
+  <p>${ads.price} €</p>
+  <p>${ads.name}</p>
+  <p>${ads.message}</p>
+  <p>${ads.buySell}</p>
   `;
 
-  return tweetTemplate;
+  return adsTemplate;
 }
 
 
 /**
  *  list items
- *  <span>${tweet.handler}</span>
- *  <span>${tweet.date}</span>
- *  <p>${tweet.message}</p>
- *  <p>${tweet.buySell}</p>
+ *  <span>${ads.handler}</span>
+ *  <span>${ads.date}</span>
+ *  <p>${ads.message}</p>
+ *  <p>${ads.buySell}</p>
  * 
  *  */

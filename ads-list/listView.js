@@ -1,26 +1,26 @@
-export const buildTweet = (tweet) => {
+export const buildAds = (ads) => {
   return `
-  <a href="./detail.html?id=${tweet.id}">  
-  <img src="${tweet.image}" alt="${tweet.name}">
+  <a href="./detail.html?id=${ads.id}">  
+  <img src="${ads.image}" alt="${ads.name}">
   <br>
-  <p>${tweet.price} €</p>
-  <p>${tweet.name}</p>
-  <p>${tweet.message}</p>
-  <p>${tweet.buySell}</p>
+  <p>${ads.price} €</p>
+  <p>${ads.name}</p>
+  <p>${ads.message}</p>
+  <p>${ads.buySell}</p>
   </a>
 
 `;
 }
 
-export const emptyTweets = () => {
-  return `<h3>No hay tweets disponibles, disculpa las molestias.</h3>`
+export const emptyAdss = () => {
+  return `<h3>No Ads available, sorry!</h3>`
 }
 
 /**
  *  list items
- *  <span>${tweet.handler}</span>
- *  <span>${tweet.date}</span>
- *  <p>${tweet.message}</p>
- *  <p>${tweet.buySell}</p>
+ *  <span>${ads.handler}</span>
+ *  <span>${ads.date}</span>
+ *  <p>${ads.message}</p>
+ *  <p>${ads.buySell}</p>
  * 
  *  */

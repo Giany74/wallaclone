@@ -1,36 +1,36 @@
-const parseTweet = (tweet) => {
+const parseAds = (ads) => {
   return {
-    handler: tweet.user.username,
-    message: tweet.message,
-    name: tweet.name,
-    price: tweet.price,
-    buySell: tweet.buySell,
-    image: tweet.image,
-    userId: tweet.user.id,
-    id: tweet.id
+    handler: ads.user.username,
+    message: ads.message,
+    name: ads.name,
+    price: ads.price,
+    buySell: ads.buySell,
+    image: ads.image,
+    userId: ads.user.id,
+    id: ads.id
   }
 }
 
-export const getAds = async (tweetId) => {
-  const url = `http://localhost:8000/api/tweets/${tweetId}?_expand=user`;
-  let tweet;
+export const getAds = async (adsId) => {
+  const url = `http://localhost:8000/api/ads/${adsId}?_expand=user`;
+  let ads;
 
   try {
     const response = await fetch(url);
     if (response.ok) {
-      tweet = await response.json();
+      ads = await response.json();
     } else {
-      throw new Error('El tweet no existe');
+      throw new Error('El ads no existe');
     }
   } catch (error) {
     throw error.message;
   }
 
-  return parseTweet(tweet);
+  return parseAds(ads);
 }
 
-export const deleteAds = async (tweetId) => {
-  const url = `http://localhost:8000/api/tweets/${tweetId}`;
+export const deleteAds = async (adsId) => {
+  const url = `http://localhost:8000/api/ads/${adsId}`;
   const token = localStorage.getItem('token');
 
   let response;

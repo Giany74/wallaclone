@@ -2,26 +2,30 @@
   "users": [
     {
       "username": "gianlucapettenon@gmail.com",
-      "password": "$2b$10$SEu53UuSgyiDXwkDZ0h4GOpBDwjW53TfY06Kms9q.pnY2dAG/oFAS",
+      "password": "$2b$10$qzG.q7cfzWm52/HqUYOQh.7HyRsjtnhuwzRAzDBwDHmhOknPfL1BK",
       "id": 1
-    },
-    {
-      "username": "gian1@gmail.com",
-      "password": "$2b$10$HZMGwGSnFl7ySqlqVMnKK.pn.DmoJo/YA7HJDaw8y/YgvMJ/Be4hO",
-      "id": 2
-    },
-    {
-      "username": "gian2@gmail.com",
-      "password": "$2b$10$HZMGwGSnFl7ySqlqVMnKK.pn.DmoJo/YA7HJDaw8y/YgvMJ/Be4hO",
-      "id": 3
     }
   ],
-  "tweets": [
+  "ads": [
     {
-      "message": "gian1\n",
-      "userId": 2,
-      "updatedAt": "2023-10-25T08:12:46.431Z",
+      "message": "2",
+      "name": "1",
+      "price": "3",
+      "buySell": "Sell",
+      "image": "https://lh3.googleusercontent.com/fife/AK0iWDyWulyBLqGHbU7g3dpVA15S1xM2s2jiEI4Mq5k93Wg7aMDfsCxxvuwDdv25mym1zAwhYMdk9OnH1eWI0ZcNWFZ-1A-1tAE04upaZS3K_EW0XQIhtpGTxacpyCXVHkBR7bqFp0h4JCO0ls0U7JVsfhplDrinjEbOS1IKrOXH8_hljvmRmznKnjIRdgfoEBW3ritQeKe1Rs6PS9SnscGGptDxVHT4U8UFPYrv1m3blqeIum3XADAy1PMSxiqZe_CbJspsl-weBO9KBpR63Tvn7DthzsVRSaGZY31V8YfduHQG5bbcYEaRHeTSNG_UBxQwstxEV5eE63-aHU2AR13WVMruVv1MpA9keXemdCxM8G52v_PHnQDUmCGavi9VtmRvqVtENUIVbjPv9LEJ-eAHQegDi-ZYTfCHe3PbpK0RAuBsNXCFxsW9KTDvgFXwscNFMWcE43if94JinxPuvFS_nm-YPC3EPXTvzmiRYqq5NXNtdsMVo-GrzrwvPDjvhqIzOjknirmBY3h__S7_Ly0y5Cp67fKI806CluOS5pEtmy3vxVTNXrxnCN8vZ32n6lX_9qYALKE322i6Gj0MsaaY7pefSP-YMDrQz76w18j0EHVBOobIVshtwcWUt-U5dOK1Wb7TbDcPQwd3ScZBR4rldB7pFpH7sJOG5tz9NG9c406y3N4SWkV3n7jWpI88XSsUISQFoSC15iMQJW0pLoJ0fJlsYbyXqbCkeJUs1NUFUUg4HjhQHm3DQeNPun5Xh-Yvb4m7B8JqgdmfRsek7PdIfne7xVmwAGVPIt97UTrTZfAbSvgJMVC-h0NUDqX91HdsH0PNd1aMwOoInRTw2sGQb0snbU4eY8-BjUhH7bWAA_zChIJlHI7FUt_bOGp0i6IRYBm_eVkPR_acnxgzucKESba_T_3W8pTPvxrVpE9XvfjC-bvs-kKZ4dFli5kCw3g3sC_kVn5DRc3sJuSiIJBL7_SK22Q_S19NWDXG6Q=w2163-h1172",
+      "userId": 1,
+      "updatedAt": "2023-10-26T14:16:45.464Z",
       "id": 1
+    },
+    {
+      "message": "3",
+      "name": "2",
+      "price": "4",
+      "buySell": "Buy",
+      "image": "https://lh3.googleusercontent.com/fife/AK0iWDyWulyBLqGHbU7g3dpVA15S1xM2s2jiEI4Mq5k93Wg7aMDfsCxxvuwDdv25mym1zAwhYMdk9OnH1eWI0ZcNWFZ-1A-1tAE04upaZS3K_EW0XQIhtpGTxacpyCXVHkBR7bqFp0h4JCO0ls0U7JVsfhplDrinjEbOS1IKrOXH8_hljvmRmznKnjIRdgfoEBW3ritQeKe1Rs6PS9SnscGGptDxVHT4U8UFPYrv1m3blqeIum3XADAy1PMSxiqZe_CbJspsl-weBO9KBpR63Tvn7DthzsVRSaGZY31V8YfduHQG5bbcYEaRHeTSNG_UBxQwstxEV5eE63-aHU2AR13WVMruVv1MpA9keXemdCxM8G52v_PHnQDUmCGavi9VtmRvqVtENUIVbjPv9LEJ-eAHQegDi-ZYTfCHe3PbpK0RAuBsNXCFxsW9KTDvgFXwscNFMWcE43if94JinxPuvFS_nm-YPC3EPXTvzmiRYqq5NXNtdsMVo-GrzrwvPDjvhqIzOjknirmBY3h__S7_Ly0y5Cp67fKI806CluOS5pEtmy3vxVTNXrxnCN8vZ32n6lX_9qYALKE322i6Gj0MsaaY7pefSP-YMDrQz76w18j0EHVBOobIVshtwcWUt-U5dOK1Wb7TbDcPQwd3ScZBR4rldB7pFpH7sJOG5tz9NG9c406y3N4SWkV3n7jWpI88XSsUISQFoSC15iMQJW0pLoJ0fJlsYbyXqbCkeJUs1NUFUUg4HjhQHm3DQeNPun5Xh-Yvb4m7B8JqgdmfRsek7PdIfne7xVmwAGVPIt97UTrTZfAbSvgJMVC-h0NUDqX91HdsH0PNd1aMwOoInRTw2sGQb0snbU4eY8-BjUhH7bWAA_zChIJlHI7FUt_bOGp0i6IRYBm_eVkPR_acnxgzucKESba_T_3W8pTPvxrVpE9XvfjC-bvs-kKZ4dFli5kCw3g3sC_kVn5DRc3sJuSiIJBL7_SK22Q_S19NWDXG6Q=w2163-h1172",
+      "userId": 1,
+      "updatedAt": "2023-10-26T14:17:01.321Z",
+      "id": 2
     }
   ]
 }

@@ -1,12 +1,12 @@
-import { createTweet } from "./creationModel.js";
+import { createAds } from "./creationModel.js";
 import { dispatchEvent } from "../utils/dispatchEvent.js";
 
-export const tweetCreationController = (tweetCreation) => {
+export const adsCreationController = (adsCreation) => {
 
-  tweetCreation.addEventListener('submit', async (event) => {
+  adsCreation.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const formData = new FormData(tweetCreation);
+    const formData = new FormData(adsCreation);
     const message = formData.get("message");
     const name = formData.get("name");
     const price = formData.get("price");
@@ -14,13 +14,13 @@ export const tweetCreationController = (tweetCreation) => {
     const image = formData.get("image");
 
     try {
-      await createTweet(message, name, price, buySell, image);
-      dispatchEvent('tweetCreated', { type: "success", message: "Ads successfully completed" }, tweetCreation);
+      await createAds(message, name, price, buySell, image);
+      dispatchEvent('adsCreated', { type: "success", message: "Ads successfully completed" }, adsCreation);
       setTimeout(() => {
         window.location = "index.html";
       }, 2000);
     } catch (error) {
-      dispatchEvent('tweetCreated', { type: "error", message: "Ads error occurred" }, tweetCreation);      
+      dispatchEvent('adsCreated', { type: "error", message: "Ads error occurred" }, adsCreation);      
     }
 
   })

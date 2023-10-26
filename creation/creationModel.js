@@ -1,5 +1,5 @@
-export const createTweet = async (message, name, price, buySell, image) => {
-  const url = "http://localhost:8000/api/tweets";
+export const createAds = async (message, name, price, buySell, image) => {
+  const url = "http://localhost:8000/api/ads";
   const token = localStorage.getItem('token');
 
   const body = {

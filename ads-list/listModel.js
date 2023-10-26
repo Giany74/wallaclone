@@ -1,28 +1,28 @@
-const transformTweets = (tweets) => {
-  return tweets.map(tweet => ({
-    handler: tweet.user.username,
+const transformAdss = (adss) => {
+  return adss.map(ads => ({
+    handler: ads.user.username,
     date: new Date().toISOString(),
-    message: tweet.message,
-    name: tweet.name,
-    price: tweet.price,
-    buySell: tweet.buySell,
-    image: tweet.image,
-    id: tweet.id
+    message: ads.message,
+    name: ads.name,
+    price: ads.price,
+    buySell: ads.buySell,
+    image: ads.image,
+    id: ads.id
   }))
 }
 
-export const getTweets = async () => {
-  const url = "http://localhost:8000/api/tweets?_expand=user";
-  let parsedTweets = [];
+export const getAdss = async () => {
+  const url = "http://localhost:8000/api/ads?_expand=user";
+  let parsedAdss = [];
 
   try {
     const response = await fetch(url);
-    const tweets = await response.json();
-    parsedTweets = transformTweets(tweets)
+    const adss = await response.json();
+    parsedAdss = transformAdss(adss)
     
   } catch (error) {
     throw error;
   }
   
-  return parsedTweets;
+  return parsedAdss;
 }

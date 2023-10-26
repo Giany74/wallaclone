@@ -1,44 +1,44 @@
-import { getTweets } from "./listModel.js";
-import { buildTweet, emptyTweets } from "./listView.js";
+import { getAdss } from "./listModel.js";
+import { buildAds, emptyAdss } from "./listView.js";
 
-export const tweetListController = async (tweetList) => {
-  tweetList.innerHTML = '';
-  let tweets = [];
+export const adsListController = async (adsList) => {
+  adsList.innerHTML = '';
+  let adss = [];
 
   try {
-    dispatchEvent('startLoadingTweets', null, tweetList);
-    tweets = await getTweets();
+    dispatchEvent('startLoadingAdss', null, adsList);
+    adss = await getAdss();
   } catch (error) {
     const event = createCustomEvent('error', 'Error cargando Ads')
-    tweetList.dispatchEvent(event);
+    adsList.dispatchEvent(event);
   } finally {
-    dispatchEvent('finishLoadingTweets', null, tweetList);
+    dispatchEvent('finishLoadingAdss', null, adsList);
   }
 
-  if (tweets.length === 0) {
-    tweetList.innerHTML = emptyTweets();
+  if (adss.length === 0) {
+    adsList.innerHTML = emptyAdss();
   } else {
-    renderTweets(tweets, tweetList);
+    renderAdss(adss, adsList);
 
     const event = createCustomEvent('success', 'Ads loaded');
-    tweetList.dispatchEvent(event);
+    adsList.dispatchEvent(event);
   }
   
 }
 
-const renderTweets = (tweets, tweetList) => {
-  tweets.forEach(tweet => {
-    const tweetContainer = document.createElement('div');
-    tweetContainer.classList.add('tweet');
+const renderAdss = (adss, adsList) => {
+  adss.forEach(ads => {
+    const adsContainer = document.createElement('div');
+    adsContainer.classList.add('ads');
     
-    tweetContainer.innerHTML = buildTweet(tweet);
+    adsContainer.innerHTML = buildAds(ads);
 
-    tweetList.appendChild(tweetContainer)
+    adsList.appendChild(adsContainer)
   })
 }
 
 const createCustomEvent = (type, message) => {
-  const event = new CustomEvent("tweetsLoaded", {
+  const event = new CustomEvent("adssLoaded", {
     detail: {
       type: type,
       message: message

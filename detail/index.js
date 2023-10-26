@@ -1,20 +1,20 @@
-import { tweetDetailController } from "./detailController.js";
+import { adsDetailController } from "./detailController.js";
 import { notificationsController } from "../notifications/notificationsController.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
   const params = new URLSearchParams(window.location.search);
-  const tweetId = params.get("id");
+  const adsId = params.get("id");
 
   const notifications = document.querySelector("#notifications");
   const showNotification = notificationsController(notifications);
 
-  const tweetDetail = document.querySelector('#tweetDetail');
+  const adsDetail = document.querySelector('#adsDetail');
 
-  tweetDetail.addEventListener('tweetLoaded', (event) => {
+  adsDetail.addEventListener('adsLoaded', (event) => {
     showNotification(event.detail.message, event.detail.type);
   })
 
-  tweetDetailController(tweetDetail, tweetId);
+  adsDetailController(adsDetail, adsId);
 
 })

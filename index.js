@@ -1,5 +1,5 @@
 import { notificationsController } from "./notifications/notificationsController.js";
-import { tweetListController } from "./ads-list/listController.js";
+import { adsListController } from "./ads-list/listController.js";
 import { sessionController } from "./session/sessionController.js";
 import { loaderController } from "./loader/loaderController.js";
 
@@ -11,19 +11,19 @@ const loader = document.getElementById('loader');
 const { show, hide } =  loaderController(loader);
 
 document.addEventListener('DOMContentLoaded', () => {
-  const tweetList = document.getElementById('tweets');
+  const adsList = document.getElementById('adss');
   
-  tweetList.addEventListener('tweetsLoaded', (event) => {
+  adsList.addEventListener('adssLoaded', (event) => {
     showNotification(event.detail.message, event.detail.type)
   })
-  tweetList.addEventListener('startLoadingTweets', () => {
+  adsList.addEventListener('startLoadingAdss', () => {
     show();
   })
-  tweetList.addEventListener('finishLoadingTweets', () => {
+  adsList.addEventListener('finishLoadingAdss', () => {
     hide();
   })
 
-  tweetListController(tweetList);
+  adsListController(adsList);
 
   const session = document.getElementById('session');
   sessionController(session);

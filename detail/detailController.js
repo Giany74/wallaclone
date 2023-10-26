@@ -3,14 +3,14 @@ import { buildAds } from "./detailView.js";
 import { dispatchEvent } from "../utils/dispatchEvent.js";
 import { decodeToken } from "../utils/decodeToken.js";
 
-export const tweetDetailController = async (tweetDetail, tweetId) => {
+export const adsDetailController = async (adsDetail, adsId) => {
 
   try {
-    const tweet = await getAds(tweetId);
-    tweetDetail.innerHTML = buildAds(tweet);
-    handleDeleteTweet(tweet, tweetDetail);
+    const ads = await getAds(adsId);
+    adsDetail.innerHTML = buildAds(ads);
+    handleDeleteAds(ads, adsDetail);
   } catch (error) {
-    dispatchEvent('tweetLoaded', { type: "error", message: "El Ads no existe" }, tweetDetail);
+    dispatchEvent('adsLoaded', { type: "error", message: "El Ads no existe" }, adsDetail);
     setTimeout(() => {
       window.location = './index.html';
     }, 3000);
@@ -18,27 +18,27 @@ export const tweetDetailController = async (tweetDetail, tweetId) => {
   
 }
 
-const handleDeleteTweet = (tweet, tweetDetail) => {
+const handleDeleteAds = (ads, adsDetail) => {
   const token = localStorage.getItem('token');
 
   if (token) {
     const { userId } = decodeToken(token);
 
-    if (userId === tweet.userId) {
-      addDeleteTweetButton(tweet, tweetDetail);
+    if (userId === ads.userId) {
+      addDeleteAdsButton(ads, adsDetail);
     }
   }
 }
 
-const addDeleteTweetButton = (tweet, tweetDetail) => {
+const addDeleteAdsButton = (ads, adsDetail) => {
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete Ads';
   deleteButton.addEventListener('click', async () => {
     if (confirm('Surely you want to delete Ads?')) {
-      await deleteAds(tweet.id);
+      await deleteAds(ads.id);
       window.location = 'index.html';
     }
   })
 
-  tweetDetail.appendChild(deleteButton);
+  adsDetail.appendChild(deleteButton);
 }
