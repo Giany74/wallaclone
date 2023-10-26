@@ -7,10 +7,14 @@ export const tweetCreationController = (tweetCreation) => {
     event.preventDefault();
 
     const formData = new FormData(tweetCreation);
-    const message = formData.get("name", "message", "price", "buySell", "photo");
+    const message = formData.get("message");
+    const name = formData.get("name");
+    const price = formData.get("price");
+    const buySell = formData.get("buySell");
+    const photo = formData.get("photo");
 
     try {
-      await createTweet(message);
+      await createTweet(message, name, price, buySell, photo);
       dispatchEvent('tweetCreated', { type: "success", message: "Ads successfully completed" }, tweetCreation);
       setTimeout(() => {
         window.location = "index.html";

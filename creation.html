@@ -10,33 +10,47 @@
     <section id="notifications"></section>
     <form id="tweetCreation">
       <label for="name"></label>
-      <textarea
-      name="name"
-      id="name"
-      cols="30"
-      rows="3"
-      placeholder="name"
-      required
-    ></textarea>
-      <br>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Name"
+        required
+      />
+      <label for="price"></label>
+      <input
+        type="text"
+        id="price"
+        name="price"
+        placeholder="Price"
+        required
+      />
+      <label for="buySell"></label>
+      <input
+        type="text"
+        id="buySell"
+        name="buySell"
+        placeholder="Buy/Sell"
+        required
+      />
+      <label for="photo"></label>
+      <input
+        type="text"
+        id="photo"
+        name="photo"
+        placeholder="url photo"
+        required
+      />
       <label for="message"></label>
       <textarea
         name="message"
         id="message"
         cols="30"
         rows="10"
+        placeholder="Description"
         required
-        placeholder="description"
       ></textarea>
-      <br>
-      <label for="price"></label>
-      <input name="price" id="price" type="text" placeholder="price">      
-      <br>
-      <label for="buySell"></label>
-      <input name="buySell" id="buySell" type="text" placeholder="buy/sell">
-      <br>
-      <label for="photo"></label>
-      <input name="photo" id="photo" type="text" placeholder="url photo">
+
 
       <button type="submit">New Ads</button>
     </form>

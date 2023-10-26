@@ -2,7 +2,10 @@ const parseTweet = (tweet) => {
   return {
     handler: tweet.user.username,
     message: tweet.message,
-    likes: [],
+    name: tweet.name,
+    price: tweet.price,
+    buySell: tweet.buySell,
+    photo: tweet.photo,
     userId: tweet.user.id,
     id: tweet.id
   }
