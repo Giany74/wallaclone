@@ -1,18 +1,16 @@
 .notification {
-  
   font-weight: bold;
   border: solid 1px gray;
   border-radius: 8px;
   position: absolute;
-  top: 16px;
-  left: 16px;
   padding: 16px;
+  box-shadow: 5px 3px 3px grey;
 }
 
 .notification.success {
-  background-color: rgb(125, 254, 125);
+  background-color: rgb(194, 255, 194);
 }
 
 .notification.error {
-  background-color: rgb(255, 128, 128);
+  background-color: rgb(149, 117, 117);
 }

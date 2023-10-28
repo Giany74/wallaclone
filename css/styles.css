@@ -24,14 +24,6 @@
   margin: 0;
 }
 
-#bt-log {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-  background-color: #333;
-  border-radius: 5px;
-  margin-left: 5px;
-}
 
 .buttonNav {
   display: flex;
@@ -47,12 +39,29 @@
   margin-left: 5px;
 }
 
+.bt-log {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #333;
+  border-radius: 5px;
+  margin-left: 5px;
+}
 .buttonNav a:first-child {
   margin-left: 0;
 }
 
 .buttonNav a:hover {
   background-color: #666;
+}
+#price{
+  font-weight: 700;
+}
+#name{
+  text-transform: capitalize;
+}
+#message{
+  font-size: smaller;
 }
 
 #adss {

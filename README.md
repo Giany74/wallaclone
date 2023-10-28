@@ -1,12 +1,10 @@
-# Desarrollo Frontend con JS
+# Frontend Ads store development with pure JavaScript 
 
-## Utilidades
+This practice consists of the development of a web application similar to Wallapop.
 
-Tailwindcss
-$ npm run scanTailwind
+## Utilities:
+[Sparrest](https://github.com/kasappeal/sparrest.js) Developed by Alberto Casero.
 
-- Durante las clases, conforme avancemos en la teoría, iremos haciendo ejemplos para interiorizar lo que vamos aprendiendo y trastear con ejemplos. Para ello, utilizaremos un editor de código, yo os recomiendo [Visual Studio Code.](https://code.visualstudio.com/)
+Project based on the json-server utility is used to  offers us a complete REST API to simulate a real backend and adapt to the needs of this practice.
 
-- Un navegador donde iremos viendo los resultados del desarrollo y los ejemplos que vamos haciendo. Cualquier navegador moderno viene bien para el curso, como Chrome, Firefox o Safari.
-
-- Para facilidad en el desarrollo, utilizaremos alguna herramienta para que el navegador se recargue automáticamente cada vez que guardemos cambios en nuestro código. Para ello, utilizaremos [live-server](https://www.npmjs.com/package/live-server) como librería de NodeJS.
+[Tailwind](https://tailwindcss.com/) CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.
